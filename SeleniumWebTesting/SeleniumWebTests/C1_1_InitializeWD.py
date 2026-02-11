@@ -19,7 +19,7 @@ import time  # Importing time to add delays in the script
 # You can download ChromeDriver from: https://googlechromelabs.github.io/chrome-for-testing/
 
 # Get the path to the ChromeDriver from environment variables
-chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
+chromedriver_path = os.getenv("C:/Users/Ozan/.cache/selenium/chromedriver/win64/142.0.7444.175/chromedriver.exe")
 
 # Initialize the Chrome driver with the specified service
 service_obj = Service(chromedriver_path)
@@ -48,8 +48,10 @@ driver = webdriver.Chrome(service=service_obj)
 # driver.minimize_window()
 
 # Open the Google homepage
-driver.get("https://rahulshettyacademy.com")
+time.sleep(1)
+driver.get("https://www.google.com")
 
+time.sleep(1)
 # Print the title of the current webpage to the console
 print(f"Title of Webpage: {driver.title}")
 
@@ -57,7 +59,15 @@ print(f"Title of Webpage: {driver.title}")
 print(f"Present URL: {driver.current_url}")
 
 # Navigate to another URL (Selenium Practice Page)
-driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
+driver.get("https://www.yahoo.com")
+
+# Print the title of the current webpage to the console
+print(f"Title of Webpage: {driver.title}")
+
+# Print the current URL of the webpage to the console
+print(f"Present URL: {driver.current_url}")
+
+time.sleep(1)
 
 # Navigate back to the previous page (Google homepage)
 driver.back()
